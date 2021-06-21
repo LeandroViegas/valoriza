@@ -1,0 +1,4 @@
+yarn init -y
+yarn add typescript -D
+tsc --init
+yarn add ts-node-dev -D
