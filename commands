@@ -2,3 +2,14 @@ yarn init -y
 yarn add typescript -D
 tsc --init
 yarn add ts-node-dev -D
+
+
+#typeorm
+yarn add typeorm reflect-metadata sqlite3
+
+yarn typeorm migrations:create -n CreateUsers
+yarn typeorm migration:run
+yarn typeorm migration:revert
+yarn typeorm entity:create -n User
+yarn add uuid
+yarn add @types/uuid -D
