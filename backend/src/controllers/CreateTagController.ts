@@ -3,6 +3,7 @@ import { CreateTagService } from "../services/CreateTagService";
 
 class CreateTagController {
   async handle(request: Request, response: Response) {
+    console.log(__filename)
     const { name } = request.body;
 
     const createTagService = new CreateTagService();
