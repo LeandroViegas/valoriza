@@ -12,6 +12,7 @@ const app = express();
 app.use(
   cors({
     origin: [
+      "https://valoriza.vercel.app",
       "http://localhost:3000"
     ],
     credentials: true,

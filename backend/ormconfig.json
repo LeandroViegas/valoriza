@@ -1,6 +1,10 @@
 {
-    "type": "sqlite",
-    "database": "src/database/database.sqlite",
+    "type": "postgres",
+    "port": 5432,
+    "host": "bqbshfnunh2xyvtffjeu-postgresql.services.clever-cloud.com",
+    "password": "qCCPQJacrJtuGSOgQ9Xy",
+    "database": "bqbshfnunh2xyvtffjeu",
+    "username": "ut1pinknfrijrvw4soa2",
     "migrations": ["src/database/migrations/*.ts"],
     "entities": ["src/entities/*.ts"],
     "cli": {
