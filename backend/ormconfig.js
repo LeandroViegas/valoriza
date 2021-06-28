@@ -1,10 +1,10 @@
-{
+module.exports = {
     "type": "postgres",
     "port": 5432,
-    "host": "bqbshfnunh2xyvtffjeu-postgresql.services.clever-cloud.com",
-    "password": "qCCPQJacrJtuGSOgQ9Xy",
-    "database": "bqbshfnunh2xyvtffjeu",
-    "username": "ut1pinknfrijrvw4soa2",
+    "host": process.env.DB_HOST,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_DATABASE,
+    "username": process.env.DB_USERNAME,
     "migrations": ["src/database/migrations/*.ts"],
     "entities": ["src/entities/*.ts"],
     "cli": {
