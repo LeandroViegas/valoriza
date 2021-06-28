@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "E:\\Documents\\github\\nlw-valoriza\\backend\\src\\database\\database.sqlite",
+            "name": "sqlite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
