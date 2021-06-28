@@ -26,10 +26,11 @@ app.use(router);
 
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
-    console.log(__filename)
+    console.log()
 
     if (err instanceof Error) {
       return response.status(400).json({
+        __filename: __filename,
         error: err.message,
       });
     }
