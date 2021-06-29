@@ -10,7 +10,7 @@ function Home() {
 
   const [tab, setTab] = useState<"signin" | "signup">("signin");
 
-  console.log( process.env.API_BASE_URL)
+  console.log( process.env.BASEURLAPI)
 
   return (
     <>
