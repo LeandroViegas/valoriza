@@ -11,10 +11,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: [
-      "https://valoriza.vercel.app",
-      "http://localhost:3000"
-    ],
+    origin: 
+      process.env.NODE_ENV !== 'production' ? 
+      ["http://localhost:3000" ]: 
+      ["https://valoriza.vercel.app"]
+      ,
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -26,12 +27,9 @@ app.use(router);
 
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
-    console.log()
-
     if (err instanceof Error) {
       return response.status(400).json({
-        __filename: __filename,
-        error: err.message,
+        error: err.message
       });
     }
     return response.status(500).json({
@@ -41,4 +39,5 @@ app.use(
   }
 );
 
-app.listen(3333, () => {console.log("server is running"); console.log(__filename);});
+
+app.listen(3333, () => {console.log("server is running"); });

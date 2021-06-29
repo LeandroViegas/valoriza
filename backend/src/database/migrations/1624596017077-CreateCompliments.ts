@@ -2,7 +2,6 @@ import {
   MigrationInterface,
   QueryRunner,
   Table,
-  TableForeignKey,
 } from "typeorm";
 
 export class CreateCompliments1624596017077 implements MigrationInterface {
