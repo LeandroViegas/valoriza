@@ -27,6 +27,5 @@ createConnection({
   cli: {
     migrationsDir: "src/database/migrations",
     entitiesDir: "src/entities",
-  },
-  synchronize: true,
+  }
 });
