@@ -7,7 +7,7 @@ axiosCookieJarSupport(axios);
 const cookieJar = new tough.CookieJar();
 
 const api = axios.create({
-  baseURL: process.env.BASEURLAPI,
+  baseURL: "https://api-valoriza.vercel.app",
   jar: cookieJar,
   withCredentials: true,
 });

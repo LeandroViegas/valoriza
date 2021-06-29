@@ -10,8 +10,6 @@ function Home() {
 
   const [tab, setTab] = useState<"signin" | "signup">("signin");
 
-  console.log( process.env.BASEURLAPI)
-
   return (
     <>
       <Navbar />
