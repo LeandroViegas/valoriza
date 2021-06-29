@@ -12,12 +12,13 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 createConnection({
-  type: "postgres",
-  port: 5432,
-  host: process.env.DB_HOST,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-  username: process.env.DB_USERNAME,
+  type: "sqlite",
+  database: "src/database/database.sqlite",
+  // port: 5432,
+  // host: process.env.DB_HOST,
+  // password: process.env.DB_PASSWORD,
+  // database: process.env.DB_DATABASE,
+  // username: process.env.DB_USERNAME,
   migrations: [
       CreateUsers1624330740676,
       CreateTags1624485228965,
