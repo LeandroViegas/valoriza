@@ -7,7 +7,7 @@ axiosCookieJarSupport(axios);
 const cookieJar = new tough.CookieJar();
 
 const api = axios.create({
-  baseURL: process.env.API_BASE_URL ?? "http://localhost:3333",
+  baseURL: process.env.API_BASE_URL,
   jar: cookieJar,
   withCredentials: true,
 });
