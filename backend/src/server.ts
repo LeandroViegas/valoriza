@@ -1,7 +1,5 @@
-'use strict';
 import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
-import serverless from "serverless-http";
 import "express-async-errors";
 import cors from "cors";
 
@@ -13,10 +11,11 @@ const app = express();
 
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV !== "production"
-        ? ["http://localhost:3000"]
-        : ["https://valoriza.vercel.app"],
+    origin: 
+      process.env.NODE_ENV !== 'production' ? 
+      ["http://localhost:3000" ]: 
+      ["https://valoriza.vercel.app"]
+      ,
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -30,7 +29,7 @@ app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof Error) {
       return response.status(400).json({
-        error: err.message,
+        error: err.message
       });
     }
     return response.status(500).json({
@@ -40,11 +39,5 @@ app.use(
   }
 );
 
-module.exports = app;
-app.use('/.netlify/functions/server', router);  // path must route to lambda
 
-// process.env.NODE_ENV === "production"
-  (module.exports.handler = serverless(app))
-  // : app.listen(3333, () => {
-  //     console.log("server is running");
-  //   });
+app.listen(3333, () => {console.log("server is running"); });
