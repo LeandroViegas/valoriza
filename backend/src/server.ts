@@ -24,6 +24,8 @@ app.use(
 
 app.use(express.json());
 
+app.use(router);
+
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
     if (err instanceof Error) {
@@ -38,7 +40,7 @@ app.use(
   }
 );
 
-
+module.exports = app;
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 // process.env.NODE_ENV === "production"
