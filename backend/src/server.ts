@@ -40,8 +40,6 @@ app.use(
   }
 );
 
-process.env.NODE_ENV !== "production"
-  ? (module.exports.handler = serverless(app))
-  : app.listen(3333, () => {
-      console.log("server is running");
-    });
+
+module.exports.handler = serverless(app)
+
