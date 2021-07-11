@@ -42,7 +42,7 @@ app.use(
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 // process.env.NODE_ENV === "production"
-  ? (module.exports.handler = serverless(app))
+  (module.exports.handler = serverless(app))
   // : app.listen(3333, () => {
   //     console.log("server is running");
   //   });
