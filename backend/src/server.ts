@@ -1,3 +1,4 @@
+'use strict';
 import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
 import serverless from "serverless-http";
