@@ -1,7 +1,7 @@
 {
   "name": "nlw-valoriza",
-  "version": "3.4.4",
-  "main": "index.js",
+  "version": "3.4.5",
+  "main": "src/server.ts",
   "repository": "https://github.com/LeandroViegas/valoriza.git",
   "author": "LeandroDreary <l3androviegas@gmail.com>",
   "license": "MIT",
