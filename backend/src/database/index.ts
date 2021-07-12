@@ -7,8 +7,8 @@ import { CreateTags1624485228965 } from "./migrations/1624485228965-CreateTags";
 import { AlterUserAddPassword1624590690358 } from "./migrations/1624590690358-AlterUserAddPassword";
 import { CreateCompliments1624596017077 } from "./migrations/1624596017077-CreateCompliments";
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
 }
 
 createConnection({
@@ -18,15 +18,10 @@ createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   username: process.env.DB_USERNAME,
-  migrations: [
-      CreateUsers1624330740676,
-      CreateTags1624485228965,
-      AlterUserAddPassword1624590690358,
-      CreateCompliments1624596017077],
-  entities: [Tag, Compliment, User],
+  migrations: ["src/database/migrations/*.{js,ts}"],
+  entities: ["src/entities/*.{js,ts}"],
   cli: {
     migrationsDir: "src/database/migrations",
     entitiesDir: "src/entities",
   },
-  synchronize: true,
 });
