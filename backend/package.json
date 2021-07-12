@@ -1,13 +1,13 @@
 {
   "name": "nlw-valoriza",
-  "version": "3.4.5",
-  "main": "src/server.ts",
+  "version": "3.4.6",
+  "main": "src/server.js",
   "repository": "https://github.com/LeandroViegas/valoriza.git",
   "author": "LeandroDreary <l3androviegas@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev src/server.ts",
-    "build": "ts-node src/server.ts",
+    "build": "ts-node src/server.js",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {

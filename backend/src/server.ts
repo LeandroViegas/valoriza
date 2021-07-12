@@ -39,7 +39,7 @@ app.use(
   }
 );
 
-(module.exports.handler = serverless(app))
+module.exports.handler = serverless(app)
 
 
 // process.env.NODE_ENV !== "production"
