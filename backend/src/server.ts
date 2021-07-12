@@ -1,6 +1,5 @@
 import "reflect-metadata";
 import express, { NextFunction, Request, Response } from "express";
-import serverless from "serverless-http";
 import "express-async-errors";
 import cors from "cors";
 
@@ -15,7 +14,10 @@ app.use(
     origin:
       process.env.NODE_ENV !== "production"
         ? ["http://localhost:3000"]
-        : ["https://valoriza.vercel.app"],
+        : [
+            "https://valoriza.vercel.app",
+            "https://valoriza.leandroviegas.com.br",
+          ],
     credentials: true,
     optionsSuccessStatus: 200,
   })
@@ -39,9 +41,6 @@ app.use(
   }
 );
 
-// module.exports.handler = serverless(app)
-
-// process.env.NODE_ENV !== "production":
 app.listen(3333, () => {
   console.log("server is running");
 });
