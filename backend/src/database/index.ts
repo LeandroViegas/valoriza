@@ -18,10 +18,16 @@ createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   username: process.env.DB_USERNAME,
-  migrations: ["src/database/migrations/*.{js,ts}"],
-  entities: ["src/entities/*.{js,ts}"],
+  migrations: [
+    CreateUsers1624330740676,
+    CreateTags1624485228965,
+    AlterUserAddPassword1624590690358,
+    CreateCompliments1624596017077,
+  ],
+  entities: [Tag, Compliment, User],
   cli: {
     migrationsDir: "src/database/migrations",
     entitiesDir: "src/entities",
   },
+  synchronize: true,
 });

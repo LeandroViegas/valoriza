@@ -1,6 +1,6 @@
 {
   "name": "nlw-valoriza",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "main": "src/server.js",
   "homepage": "/",
   "repository": "https://github.com/LeandroViegas/valoriza.git",
